@@ -18,11 +18,9 @@
             cursor: pointer;
         }
         .option:hover {
-            /*background-color: #f0f0f0;*/
             border: 3px solid black;
         }
-        .option:not(.correct):hover,
-        .option:not(.incorrect):hover {
+        .option:hover:not(.correct):not(.incorrect) {
             background-color: #f0f0f0;
         }
         .correct {
