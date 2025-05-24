@@ -1,8 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Flashcards Telekom</title>
+    <title>Flashcards TKH</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
     <style>
+        body {
+            font-size: 20px;
+        }
+        button {
+            font-size: 16px;
+            padding: 12px 16px;
+        }
         .hidden {
             display: none;
         }
@@ -30,6 +41,7 @@
             background-color: #FFB6C1;
         }
         .s1slt1zj img {/*width: 100%;*/ aspect-ratio: auto; height: auto; width: auto; max-width: 100%;}
+        #mode-selector {margin-bottom: 30px; display: flex; gap: 20px;}
     </style>
 </head>
 <body>
@@ -3021,31 +3033,31 @@
     </div>
 
     <div id="multiple-choice" class="hidden">
+        <button onclick="prevMultipleChoice()">Back</button>
+        <button onclick="nextMultipleChoice()">Next</button>
         <div class="card">
             <div id="mc-question"></div>
             <div id="options"></div>
         </div>
-        <button onclick="prevMultipleChoice()">Back</button>
-        <button onclick="nextMultipleChoice()">Next</button>
     </div>
 
     <div id="simple-mode" class="hidden">
+        <button onclick="prevSimple()">Back</button>
+        <button onclick="showAnswer()">Show Answer</button>
+        <button onclick="nextSimple()">Next</button>
         <div class="card">
             <div id="simple-question"></div>
             <div id="answer" class="hidden"></div>
         </div>
-        <button onclick="prevSimple()">Back</button>
-        <button onclick="showAnswer()">Show Answer</button>
-        <button onclick="nextSimple()">Next</button>
     </div>
 
     <div id="test-mode" class="hidden">
+        <button onclick="prevTest()">Back</button>
+        <button onclick="nextTest()">Next</button>
         <div class="card">
             <div id="test-question"></div>
             <div id="test-options"></div>
         </div>
-        <button onclick="prevTest()">Back</button>
-        <button onclick="nextTest()">Next</button>
     </div>
 
     <div id="test-result" class="hidden">
